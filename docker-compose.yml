@@ -1,0 +1,17 @@
+version: '2'
+services:
+    webserver:
+      image: httpd:latest
+      container_name: test_apache
+      ports:
+        - "3003:80"
+
+    mysql:
+      image: mysql:latest
+      container_name: test_mysql
+      ports:
+       - "3304:3306"
+      environment:
+       - MYSQL_ROOT_PASSWORD=zion 
+
+  
